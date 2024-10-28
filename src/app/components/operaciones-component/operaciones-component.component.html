@@ -1,0 +1,34 @@
+<section>
+    <h2>Lista de Operaciones</h2>
+    <div>
+        <nav>
+            <ul>
+                <li *ngFor="let operacion of operaciones">
+                    <strong>{{operacion.num1}}</strong>
+                    <strong>{{operacion.num2}}</strong>
+                    <strong>{{operacion.res}}</strong>
+                    <button (click)="eliminar(operacion)">x</button>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</section>
+
+<section>
+    <h2>Operacion</h2>
+    <form>
+        <label for="num1">Ingrese el primer numero</label>
+        <input type="text" [(ngModel)]="num1" name="num1">
+
+        <label for="op">Ingrese el operador</label>
+        <input type="text" [(ngModel)]="op" name="num1">
+
+        <label for="num2">Ingrese el segundo numero</label>
+        <input type="text" [(ngModel)]="num2" name="num2">
+
+        <label for="res">Respuesta</label>
+        <textarea [(ngModel)]="res" name="res"></textarea>
+
+        <button (click)="calcular()">Calcular</button>
+    </form>
+</section>
