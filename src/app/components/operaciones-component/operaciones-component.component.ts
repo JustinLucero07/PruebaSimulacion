@@ -39,6 +39,9 @@ export class OperacionesComponentComponent implements OnInit{
     
     this.operacionS.agregar(this.num1,this.op,this.num2,this.res)
     
+    this.num1 = 0
+    this.num2 = 0
+    this.op = ''
   }
 
   eliminar(operacion:any){
